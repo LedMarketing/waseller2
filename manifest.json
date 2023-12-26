@@ -1,0 +1,27 @@
+{
+   "action": {
+      "default_popup": "popup.html",
+      "default_title": "Plugin Sender"
+   },
+   "background": {
+      "service_worker": "service-worker.js"
+   },
+   "content_scripts": [ {
+      "js": [ "contentmin.js", "removeDiv.js", "addMenu.js", "expandirMensagens.js"],
+      "matches": [ "*://web.whatsapp.com/*" ]
+   } ],
+   "icons": {
+      "128": "img/icon128.png",
+      "16": "img/icon16.png",
+      "48": "img/icon48.png"
+   },
+   
+   "manifest_version": 3,
+   "name": "Plugin Sender",
+   "permissions": [ "storage" ],   
+   "version": "1.0.1",
+   "web_accessible_resources": [ {
+      "matches": [ "*://web.whatsapp.com/*" ],
+      "resources": [ "thx.html", "css/lib.css", "/img/*", "flmin.js" ]
+   } ]
+}
